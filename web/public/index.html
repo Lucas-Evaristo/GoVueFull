@@ -4,17 +4,18 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="/GoVueFull/web/src/styles/styles.css" />
     <script src="https://unpkg.com/vue@next" defer></script>
-    <script src="app.js" defer></script>
+    <script src="/GoVueFull/web/src/main.js" defer></script>
     <title>Tienda</title>
   </head>
   <body>
     <section id="user-goal">
       <h2>My Course Goal</h2>
       <p>{{ courseGoal }}</p>
-      <p>{{ outputGoal() }}</p>
+      <p>{{ outputGoal()}}</p>
       <p>Learn more <a v-bind:href="vueLink">About Vue</a></p>
     </section>
   </body>
 </html>
+

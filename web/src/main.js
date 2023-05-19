@@ -17,12 +17,5 @@ const app = Vue.createApp({
   },
 });
 
-const app2 = Vue.createApp({
-   data(){
-      return{
-         courseGoal2: 'Another stringy'
-      }
-   }
-})
-
 app.mount("#user-goal");
+

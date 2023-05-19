@@ -1,0 +1,6 @@
+/* some modern style with transparent card for sections*/
+.card {
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+}
