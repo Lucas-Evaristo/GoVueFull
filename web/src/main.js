@@ -1,21 +1,40 @@
+
 const app = Vue.createApp({
   data() {
     return {
-      courseGoal: "stringy",
+      textoPrueba: "Texto extraido de data()",
       vueLink: "https://vuejs.org",
+      counter: 0,
+      valor: 5,
+      name: "",
     };
   },
   methods: {
-    outputGoal() {
-      const randomNumber = Math.random();
-      if (randomNumber < 0.5) {
-        return "Learn Vue";
-      } else {
-         return 'Master Vue'
+    reduceCounter() {
+      if (this.counter >= this.valor) {
+
+        this.counter -= this.valor;
+      }else{
+        alert("sos tarado? ya esta en 0 el contador hijo de la chingada")
       }
     },
+    addCounter() {
+      this.counter += this.valor;
+    },
+    submitForm(){
+      alert("se envio el formulario")
+    }
+  },
+  computed: {
+    fullName(){
+      if(this.name == ""){
+        return "";
+      }else{
+        return this.name + " " + "Evaristo";
+      }
+    }
   },
 });
 
-app.mount("#user-goal");
+app.mount("#events");
 
