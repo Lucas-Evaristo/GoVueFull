@@ -1,7 +1,16 @@
 package main
 
-import "fmt"
+import (
+	"net/http"
+
+	"github.com/go-chi/chi"
+)
 
 func main() {
-	fmt.Println("Hello World")
+	router := chi.NewRouter()
+	router.Get("/", func(w http.ResponseWriter, r *http.Request) {
+		w.Write([]byte("welcome"))
+	})
+
+	http.ListenAndServe(":3000", router)
 }
